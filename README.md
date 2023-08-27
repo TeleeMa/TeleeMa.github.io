@@ -1,4 +1,4 @@
-# Teli Ma
+# teleema.github.io
 
 Teli Ma's Personal Website
 
