@@ -1,0 +1,237 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>MODE - Project Page</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MODE">
+    <!-- <meta name="robots" content="index,follow"> -->
+    <link rel="author" href="https://teleema.github.io/">
+
+    <!-- Fonts and stuff -->
+    <link rel="stylesheet" type="text/css" media="screen" href="project.css">
+
+    <!-- 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons/css/academicons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/charts.css/dist/charts.min.css"> -->
+
+
+</head>
+
+<body>
+    <div id="content">
+        <div id="content-inner">
+
+            <div class="section head">
+                <h1>An Examination of the Compositionality of Large Generative Vision-Language Models</h1>
+
+                <div class="authors">
+                    <a href="https://teleema.github.io/">Teli Ma<sup>1</sup></a>&nbsp;&nbsp;
+                    <a href="https://rongli.tech/">Rong Li<sup>1</sup></a>&nbsp;&nbsp;
+                    <a href="https://junweiliang.me/index.html">Junwei Liang<sup>1,2</sup></a>&nbsp;&nbsp;
+                </div>
+
+                <div class="affiliations">
+                    <a
+                        href="https://www.hkust-gz.edu.cn/academics/hubs-and-thrust-areas/information-hub/artificial-intelligence/"><sup>1</sup>AI
+                        Thrust, HKUST(GZ)</a>&nbsp;&nbsp;
+                    <a href="https://cse.hkust.edu.hk/"><sup>2</sup>CSE, HKUST</a>
+                </div>
+
+                <div class="venue">ArXiv
+                    2023
+                </div>
+            </div>
+
+            <br>
+
+            <!-- <center><img src="./xx/intro.png" border="0" width="90%"></center> -->
+            <!-- <hr> -->
+            <!-- 分割线 -->
+            <div class="section abstract">
+                <h2>ABSTRACT</h2>
+                <br>
+                <p>
+                    With the success of Large Language Models (LLMs), a surge of Generative Vision-Language Models
+                    (GVLMs) have been constructed via multimodal instruction tuning. The tuning recipe substantially
+                    deviates from the common contrastive vision-language learning. However, the performance of GVLMs in
+                    multimodal compositional reasoning remains largely unexplored, as existing evaluation metrics and
+                    benchmarks focus predominantly on assessing contrastive models like CLIP. In this paper, we examine
+                    the potential evaluation metrics to assess the GVLMs and hypothesize generative score methods are
+                    suitable for evaluating compositionality. In addition, current benchmarks tend to prioritize
+                    syntactic correctness over semantics. The presence of morphological bias in these benchmarks can be
+                    exploited by GVLMs, leading to ineffective evaluations. To combat this, we define a MorphoBias Score
+                    to quantify the morphological bias and propose a novel LLM-based strategy to calibrate the bias.
+                    Moreover, a challenging task is added to evaluate the robustness of GVLMs against inherent
+                    inclination toward syntactic correctness. We include the calibrated dataset and the task into a new
+                    benchmark, namely MOrphologicall De-biased Benchmark (MODE). Our study provides the first unbiased
+                    benchmark for the compositionality of GVLMs, facilitating future research in this direction. We will
+                    release our code and datasets.
+                </p>
+            </div>
+
+            <br>
+
+            <hr>
+            <!-- 分割线 -->
+            <div class="section materials">
+                <h2>RESOURCES</h2>
+                <center>
+                    <ul>
+                        <li class="grid">
+                            <div class="griditem">
+                                <a href="https://arxiv.org/abs/2308.10509" target="_blank" class="imageLink">
+                                    <img src="arxiv.png">
+                                </a><br>
+                                <a href="https://arxiv.org/abs/2308.10509" target="_blank">Paper</a>
+                            </div>
+                        </li>
+                        <li class="grid">
+                            <div class="griditem">
+                                <a href="https://github.com/TeleeMa/MODE" target="_blank" class="imageLink">
+                                    <img src="github.png">
+                                </a><br>
+                                <a href="https://github.com/TeleeMa/MODE" target="_blank">Code</a>
+                            </div>
+                        </li>
+                        <!-- <li class="grid">
+                            <div class="griditem">
+                                <a href="https://xxx" target="_blank" class="imageLink"><img
+                                        src="./xxx/xxx.jpg"></a><br>
+                                <a href="https://xxx" target="_blank">Extended Paper</a>
+                            </div>
+                        </li> -->
+
+                    </ul>
+                </center>
+            </div>
+            <br>
+
+            <hr>
+            <!-- 分割线 -->
+            <div class="section presentation">
+                <h2>HIGHLIGHTS</h2>
+                <br>
+                <center>
+
+                    <div class="highlights-content">
+                        <!-- <div style="width:100%; text-align: center;"> -->
+                        <div style="width:100%; text-align: left;">
+                            <h3>* Provide an elaborated analysis of potential evaluation protocols for measuring
+                                image-text coherence when generative vision-language models perform compositional
+                                reasoning.
+                            </h3>
+                            <!-- <br> -->
+                            <!-- <br> -->
+                            <img style="width:100%" src="fig1.png" alt='fig1'>
+                        </div>
+                    </div>
+
+                    <br>
+                    <br>
+
+
+                    <div class="highlights-content">
+                        <div style="width:100%; text-align: left;">
+                            <h3>* We uncover that generative VLMs sometimes prefer syntactical correctness rather
+                                than content-related correctness.
+                            </h3>
+                            <!-- <br>
+                            <br> -->
+                            <div align="center">
+
+                                <img style="width:100%" src="fig2.png" alt='fig2'>
+                            </div>
+                        </div>
+
+                        <br>
+                        <br>
+
+
+                        <div class="highlights-content">
+                            <div style="width:100%; text-align: left;">
+                                <h3>* We identify the existence of morphological bias in current multimodal
+                                    compositional reasoning benchmarks, and we quantitatively assess the bias with a
+                                    defined
+                                    MorphoBias Score.</h3>
+                                <!-- <br>
+                                <br> -->
+                                <div align="center">
+                                    <img style="width:50%" src="fig3.png" alt='fig3'>
+                                </div>
+                            </div>
+
+                            <br>
+                            <br>
+
+
+                            <div class="highlights-content">
+                                <div style="width:100%; text-align: left;">
+                                    <h3>* Based on the MorphoBias Score, we propose a MOrphologicall De-biased
+                                        Benchmark
+                                        (MODE) based on current benchmarks for more robust multimodal compositionality
+                                        evaluation.</h3>
+                                    <!-- <br>
+                                    <br> -->
+                                    <div align="center">
+
+                                        <img style="width:100%" src="fig4.png" alt='fig4'>
+                                    </div>
+                                </div>
+                                <br>
+                                <br>
+
+                            <div class="highlights-content">
+                                    <div style="width:100%; text-align: left;">
+                                        <h3>* Based on the
+                                            MODE benchmark, we report the performance of more con-
+                                            current GVLMs based on the VisualGPTScore metric in the below Table. </h3>
+                                        <!-- <br>
+                                        <br> -->
+                                        <div align="center">
+                                            <img style="width:50%" src="fig5.png" alt='fig3'>
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <br>
+
+                            <div class="highlights-content">
+                                    <div style="width:100%; text-align: left;">
+                                        <h3>* We present some examples of items in Content challenge branch in our MODE benchmark as below. </h3>
+                                        <!-- <br>
+                                        <br> -->
+                                        <div align="center">
+                                            <img style="width:90%" src="fig6.png" alt='fig3'>
+                                        </div>
+                                    </div>
+                </center>
+            </div>
+
+            <br>
+            <br>
+            
+            <hr>
+            <!-- 分割线 -->
+
+            <div class="section citation">
+                <h2>CITATION</h2>
+                <div class="section bibtex">
+                    <!-- <div> -->
+                    <pre>@article{ma2023examination,
+    title={An Examination of the Compositionality of Large Generative Vision-Language Models},
+    author={Ma, Teli and Li, Rong and Liang, Junwei},
+    journal={arXiv preprint arXiv:2308.10509},
+    year={2023}
+  }
+}</pre>
+                </div>
+            </div>
+
+</body>
+
+</html>
