@@ -4,7 +4,7 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>MODE - Project Page</title>
+    <title>SADE - Project Page</title>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="MODE">
@@ -57,21 +57,7 @@
                 <h2>ABSTRACT</h2>
                 <br>
                 <p>
-                    With the success of Large Language Models (LLMs), a surge of Generative Vision-Language Models
-                    (GVLMs) have been constructed via multimodal instruction tuning. The tuning recipe substantially
-                    deviates from the common contrastive vision-language learning. However, the performance of GVLMs in
-                    multimodal compositional reasoning remains largely unexplored, as existing evaluation metrics and
-                    benchmarks focus predominantly on assessing contrastive models like CLIP. In this paper, we examine
-                    the potential evaluation metrics to assess the GVLMs and hypothesize generative score methods are
-                    suitable for evaluating compositionality. In addition, current benchmarks tend to prioritize
-                    syntactic correctness over semantics. The presence of morphological bias in these benchmarks can be
-                    exploited by GVLMs, leading to ineffective evaluations. To combat this, we define a MorphoBias Score
-                    to quantify the morphological bias and propose a novel LLM-based strategy to calibrate the bias.
-                    Moreover, a challenging task is added to evaluate the robustness of GVLMs against inherent
-                    inclination toward syntactic correctness. We include the calibrated dataset and the task into a new
-                    benchmark, namely MOrphologicall De-biased Benchmark (MODE). Our study provides the first unbiased
-                    benchmark for the compositionality of GVLMs, facilitating future research in this direction. We will
-                    release our code and datasets.
+                With the success of Large Language Models (LLMs), many Generative Vision-Language Models (GVLMs) have been constructed via multimodal instruction tuning. However, the performance of GVLMs in multimodal compositional reasoning remains under-explored. In this paper, we examine both the evaluation metrics ( VisualGPTScore, etc.) and current benchmarks for evaluating the compositionality of GVLMs. We identify the syntactical bias in current benchmarks, which is exploited by the linguistic capability of GVLMs. The bias renders VisualGPTScore an insufficient metric for assessing GVLMs. To combat this, we first introduce a SyntaxBias Score, leveraging LLMs to quantify such bias for mitigation. A challenging new task is subsequently added to evaluate the robustness of GVLMs against inherent inclination toward syntactical correctness. Using the bias-mitigated datasets and the new task, we propose a novel benchmark, namely SyntActically DE-biased benchmark (SADE). Our study provides an unbiased benchmark for the compositionality of GVLMs, facilitating future research in this direction. 
                 </p>
             </div>
 
@@ -122,13 +108,14 @@
                     <div class="highlights-content">
                         <!-- <div style="width:100%; text-align: center;"> -->
                         <div style="width:100%; text-align: left;">
-                            <h3>* Provide an elaborated analysis of potential evaluation protocols for measuring
-                                image-text coherence when generative vision-language models perform compositional
-                                reasoning.
+                            <h3>* A prevalent syntactical bias is present in contemporary multimodal compositional reasoning benchmarks.These benchmarks are tailored for assessing EVLMs, and the approach
+                                used to create negative references may not be effective for the evaluation of GVLMs.
                             </h3>
                             <!-- <br> -->
                             <!-- <br> -->
                             <img style="width:100%" src="fig1.png" alt='fig1'>
+                        
+                            <img style="width:100%" src="fig2.png" alt='fig2'>
                         </div>
                     </div>
 
@@ -136,33 +123,16 @@
                     <br>
 
 
-                    <div class="highlights-content">
-                        <div style="width:100%; text-align: left;">
-                            <h3>* We uncover that generative VLMs sometimes prefer syntactical correctness rather
-                                than content-related correctness.
-                            </h3>
-                            <!-- <br>
-                            <br> -->
-                            <div align="center">
-
-                                <img style="width:100%" src="fig2.png" alt='fig2'>
-                            </div>
-                        </div>
-
-                        <br>
-                        <br>
-
 
                         <div class="highlights-content">
                             <div style="width:100%; text-align: left;">
-                                <h3>* We identify the existence of morphological bias in current multimodal
-                                    compositional reasoning benchmarks, and we quantitatively assess the bias with a
-                                    defined
-                                    MorphoBias Score.</h3>
+                                <h3>* We quantitatively analyze the syntactical bias
+                                    (namely SyntaxBias Score) that broadly exists
+                                    in current benchmarks by leveraging LLMs.</h3>
                                 <!-- <br>
                                 <br> -->
                                 <div align="center">
-                                    <img style="width:50%" src="fig3.png" alt='fig3'>
+                                    <img style="width:80%" src="fig3.png" alt='fig3'>
                                 </div>
                             </div>
 
@@ -172,41 +142,34 @@
 
                             <div class="highlights-content">
                                 <div style="width:100%; text-align: left;">
-                                    <h3>* Based on the MorphoBias Score, we propose a MOrphologicall De-biased
-                                        Benchmark
-                                        (MODE) based on current benchmarks for more robust multimodal compositionality
-                                        evaluation.</h3>
+                                    <h3>* With the SyntaxBias Score, we propose a
+                                        SyntActically DE-biased benchmark (SADE)
+                                        based on current benchmarks for a more robust multimodal compositionality evaluation.
+                                        We adopt multiple strategies to mitigate the
+                                        syntactical bias in existing benchmarks. We
+                                        also add a new challenging assessment in
+                                        SADE to evaluate the content understanding
+                                        across visual and language modalities.</h3>
                                     <!-- <br>
                                     <br> -->
                                     <div align="center">
 
                                         <img style="width:100%" src="fig4.png" alt='fig4'>
+                                        <img style="width:100%" src="fig5.png" alt='fig5'>
                                     </div>
                                 </div>
                                 <br>
                                 <br>
 
-                            <div class="highlights-content">
-                                    <div style="width:100%; text-align: left;">
-                                        <h3>* Based on the
-                                            MODE benchmark, we report the performance of more con-
-                                            current GVLMs based on the VisualGPTScore metric in the below Table. </h3>
-                                        <!-- <br>
-                                        <br> -->
-                                        <div align="center">
-                                            <img style="width:50%" src="fig5.png" alt='fig3'>
-                                        </div>
-                                    </div>
-                                    <br>
-                                    <br>
 
                             <div class="highlights-content">
                                     <div style="width:100%; text-align: left;">
-                                        <h3>* We present some examples of items in Content challenge branch in our MODE benchmark as below. </h3>
+                                        <h3>* The performance of several GVLMs is reported on SADE, as well as the robustness
+                                            and faithfulness to human judgments. </h3>
                                         <!-- <br>
                                         <br> -->
                                         <div align="center">
-                                            <img style="width:90%" src="fig6.png" alt='fig3'>
+                                            <img style="width:90%" src="fig6.png" alt='fig6'>
                                         </div>
                                     </div>
                 </center>
@@ -222,13 +185,12 @@
                 <h2>CITATION</h2>
                 <div class="section bibtex">
                     <!-- <div> -->
-                    <pre>@article{ma2023examination,
-    title={An Examination of the Compositionality of Large Generative Vision-Language Models},
-    author={Ma, Teli and Li, Rong and Liang, Junwei},
-    journal={arXiv preprint arXiv:2308.10509},
-    year={2023}
-  }
-}</pre>
+                <pre>@article{ma2023examination, 
+        title={An examination of the compositionality of large generative vision-language models},
+        author={Ma, Teli and Li, Rong and Liang, Junwei},
+        journal={arXiv preprint arXiv:2308.10509},
+        year={2023}}                      
+</pre>
                 </div>
             </div>
 
