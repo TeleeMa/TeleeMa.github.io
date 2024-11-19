@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+  <meta charset="utf-8">
+  <meta name="description"
+        content="GLOVER: Generalizable Open-Vocabulary Affordance Reasoning for Task-Oriented Grasping">
+  <meta name="keywords" content="Contrastive imitation learning, Multi-task learning, Robotic manipulation">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contrastive Imitation Learning for Language-guided Multi-Task Robotic Manipulation</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/UST.svg.png">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">GLOVER: Generalizable Open-Vocabulary Affordance Reasoning for Task-Oriented Grasping</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+	      <a href="https://teleema.github.io/">Teli Ma</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            </span>
+            <span class="author-block">
+        <a href="https://scholar.google.com/citations?user=GaJXZ-UAAAAJ&hl=en">Zifan Wang</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            </span>
+            <span class="author-block">
+	      <a href="https://jiaming-zhou.github.io/">Jiaming Zhou</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            </span>
+            <span class="author-block">
+	      <a href="https://sallymmx.github.io/">Mengmeng Wang</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            </span>
+            <span class="author-block">
+	      <a href="https://junweiliang.me/">Junwei Liang</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+
+  </div>
+</section>
+
+
+<div class="column has-text-centered">
+  <div class="publication-links">
+    <!-- PDF Link. -->
+    <span class="link-block">
+      <a href="https://arxiv.org/pdf/2406.09738"
+         class="external-link button is-normal is-rounded is-dark">
+        <span class="icon">
+            <i class="fas fa-file-pdf"></i>
+        </span>
+        <span>Paper</span>
+      </a>
+    </span>
+    <span class="link-block">
+      <a href="https://arxiv.org/pdf/2406.09738"
+         class="external-link button is-normal is-rounded is-dark">
+        <span class="icon">
+            <i class="ai ai-arxiv"></i>
+        </span>
+        <span>arXiv</span>
+      </a>
+    </span>
+
+    <span class="link-block">
+      <a href="https://youtu.be/t6xLTnMFTB8"
+         class="external-link button is-normal is-rounded is-dark">
+        <span class="icon">
+            <i class="fab fa-youtube"></i>
+        </span>
+        <span>Video</span>
+      </a>
+    </span>
+    <!-- Code Link. -->
+    <span class="link-block">
+      <a href="https://github.com/TeleeMa/Sigma-Agent"
+         class="external-link button is-normal is-rounded is-dark">
+        <span class="icon">
+            <i class="fab fa-github"></i>
+        </span>
+        <span>Code</span>
+        </a>
+    </span>
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!--/ Paper video. -->
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <h2 class="title is-3">Abstract</h2>
+	<p>
+	    <figure>
+	    <a href="./imgs/intro.png"><img src="./imgs/intro.png"></a>
+	    </figure>
+        </p>
+        <div class="content has-text-justified">
+         <p> </p>
+          <p>
+            Inferring affordable (i.e., graspable) parts of arbitrary objects based on human specifications is essential for robots advancing toward open-vocabulary manipulation. Current grasp planners, however, are hindered by limited vision-language comprehension and time-consuming 3D radiance modeling, restricting real-time, open-vocabulary interactions with objects. To address these limitations, we propose GLOVER, a unified Generalizable Open-Vocabulary Affordance Reasoning framework, which fine-tunes the Large Language Models (LLMs) to predict visual affordance of graspable object parts within RGB feature space. We compile a dataset of over 10,000 images from human-object interactions, annotated with unified visual and linguistic affordance labels, to enable multi-modal fine-tuning. GLOVER inherits world knowledge and common-sense reasoning from LLMs, facilitating more fine-grained object understanding and sophisticated tool-use reasoning. To enable effective real-world deployment, we present Affordance-Aware Grasping Estimation (AGE), a non-parametric grasp planner that aligns the gripper pose with a superquadric surface derived from affordance data. In evaluations across 30 real-world scenes, GLOVER achieves success rates of 86.0% in part identification and 76.3% in grasping, with speeds approximately 330 times faster in affordance reasoning and 40 times faster in grasping pose estimation than the previous state-of-the-art.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  </div>
+</section>
+
+<!-- <section class="section">
+  <div class="container is-max-desktop">
+    <!-- Paper video. -->
+    <!-- <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <h2 class="title is-3">Overview Video</h2>
+        <div class="publication-video">
+          <iframe src="https://www.youtube.com/embed/t6xLTnMFTB8"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+   </div>
+</section> --> 
+
+
+
+
+</body>
+</html>
