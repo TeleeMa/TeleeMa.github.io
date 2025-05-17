@@ -12,11 +12,10 @@
   </title>
 
   <!-- Thumbnail for social media sharing -->
-  <!--To Do-->
-  <meta property="og:image" content="media/thumbnail.jpg">
+  <meta property="og:image" content="media/figures/thumbnail.png">
 
   <!-- Favicon -->
-  <link rel="icon" href="media/thumbnail.jpg" type="image/jpeg">
+  <link rel="icon" href="media/figures/logo.png" type="image/jpeg">
 
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -81,14 +80,14 @@
             </div>
             <div class="button-container">
               <!-- <a href="rekep.pdf" target="_blank" class="button"><i class="fa-light fa-file"></i>&emsp14;PDF</a> -->
-              <a href="http://arxiv.org/abs/2409.01652" target="_blank" class="button"><i
-                  class="ai ai-arxiv"></i>&emsp14;arXiv</a>
+              <!--To Do-->
+              <a href="" target="_blank" class="button"><i class="ai ai-arxiv"></i>&emsp14;arXiv</a>
               <a href="https://www.youtube.com/embed/MDQccK681-k" target="_blank" class="button"><i
                   class="fa-light fa-film"></i>&emsp14;Video</a>
               <!-- <a href="https://x.com/wenlong_huang/status/1829135436717142319" target="_blank" class="button"><i
                   class="fa-brands fa-x-twitter"></i>&emsp14;tl;dr</a> -->
-              <a href="https://github.com/huangwl18/ReKep" target="_blank" class="button"><i
-                  class="fa-light fa-code"></i>&emsp14;Code</a>
+              <!--To Do-->
+              <a href="" target="_blank" class="button"><i class="fa-light fa-code"></i>&emsp14;Code</a>
             </div>
           </div>
         </div>
@@ -100,12 +99,13 @@
     <hr class="rounded">
     <div class="container is-max-widescreen">
       <div class="rows">
-        <div class="publication-video">
+        <div class="publication-video" style="margin-bottom: 2rem;">
           <iframe src="https://www.youtube.com/embed/MDQccK681-k" frameborder="0" allow="autoplay; encrypted-media"
             allowfullscreen></iframe>
         </div>
       </div>
 
+      <!--Abstract-->
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
           <h2 class="title is-3">Abstract</h2>
@@ -163,23 +163,45 @@
         <div class="columns">
           <div class="column has-text-centered">
             <p style="text-align:center;">
-              <img width="50%" src="media/figures/dataset/sun.jpg" class="method-image" />
+              <img width="70%" src="media/figures/dataset/sun.jpg" class="method-image" />
             </p>
             <p class="content has-text-centered is-size-5"><b>Fig. 1</b></p>
           </div>
           <div class="column has-text-centered">
-            <p style="text-align:center;">
-              <img width="100%" src="media/figures/dataset/compare.png" class="method-image" />
+            <p style="text-align:center; margin-top: 90px; margin-right: 110px;">
+              <img style="transform: scale(1.2); transform-origin: center;" src="media/figures/dataset/compare.png"
+                class="method-image" />
             </p>
-            <p class="content has-text-centered is-size-5"><b>Fig. 2</b></p>
+            <p class="content has-text-centered is-size-5" style="margin-top: 20px;"><b>Fig. 2</b></p>
           </div>
         </div>
         <div class="columns">
           <div class="column has-text-centered">
             <p style="text-align:center;">
-              <img width="100%" src="media/figures/dataset/show.png" class="method-image" />
+              <img width="90%" src="media/figures/dataset/show.png" class="method-image" />
             </p>
             <p class="content has-text-centered is-size-5"><b>Fig. 3</b></p>
+          </div>
+        </div>
+
+        <p class="content has-text-justified">
+          <b>Fig. 4</b> shows the distribution of primary object categories in HOVA-500K (>1000 data samples).
+          <b>Fig.5</b> shows the distribution of primary action categories in HOVA-500K (>100 data samples)
+        </p>
+        <div class="columns">
+          <div class="column has-text-centered">
+            <p style="text-align:center;">
+              <img width="80%" src="media/figures/dataset/obj.png" class="method-image" />
+            </p>
+            <p class="content has-text-centered is-size-5"><b>Fig. 4</b></p>
+          </div>
+        </div>
+        <div class="columns">
+          <div class="column has-text-centered">
+            <p style="text-align:center;">
+              <img width="80%" src="media/figures/dataset/action.png" class="method-image" />
+            </p>
+            <p class="content has-text-centered is-size-5"><b>Fig. 5</b></p>
           </div>
         </div>
       </div>
@@ -195,6 +217,69 @@
           <div class="column has-text-centered">
             <p style="text-align:center;">
               <img width="100%" src="media/figures/global-to-local-vis.jpg" class="method-image" />
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!--Comparison with Qwen-2.5-VL-->
+      <hr class="rounded">
+      <div class="rows">
+        <h2 class="title is-3">Comparison with Qwen-2.5-VL</h2>
+        <p class="content has-text-justified">
+          We aim to unleash the potential of the affordance representation in diverse downstream tasks. Compared with
+          <b>Qwen-2.5-VL</b>, a powerful VLM with strong spatial understanding, GLOVER++ provides more physically
+          plausible and functionally grounded affordance predictions.
+        </p>
+        <div class="columns">
+          <div class="column has-text-centered">
+            <p style="text-align:center;">
+              <img width="100%" src="media/figures/compare_to_qwen.jpg" class="method-image" />
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!--Zero Shot Manipulatio-->
+      <hr class="rounded">
+      <div class="rows">
+        <h2 class="title is-3">Zero-Shot Manipulation</h2>
+        <p class="content has-text-justified">
+          By projecting affordance prediction into 3D space, GLOVER++ can perform zero-shot manipulation tasks in both
+          the simulated and real-world environments. We show some qualitative demonstrations. The reasoned argmax
+          affordance point from GLOVER++ is shown in the video.
+        </p>
+        <div class="columns">
+          <div class="column has-text-centered">
+            <video id="dist1" controls autoplay loop muted width="100%">
+              <source src="media/videos/grasp.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+
+      <!--Imitation Learning-->
+      <hr class="rounded">
+      <div class="rows">
+        <h2 class="title is-3">Imitation Learning</h2>
+        <p class="content has-text-justified">
+          <b>Left:</b> GLOVER++ serves as a perceptual module for the VLM planner to complete long-horizon tasks.
+          <b>Right:</b> GLOVER++ enables bimanual tasks by reasoning affordances for both left and right hands with
+          spatial relationships.
+        </p>
+        <div class="columns">
+          <div class="column has-text-centered">
+            <p style="text-align:center; margin-left: -90px;margin-top: 20px;">
+              <img width="50%" src="media/figures/rlbench_vis.jpg" class="method-image" />
+            </p>
+            <p class="content has-text-centered is-size-5"><b>Fig. 1</b></p>
+          </div>
+          <div class="column has-text-centered">
+            <p style="text-align:center; margin-top: 70px;margin-right:130px ;">
+              <img style="transform: scale(1.5); transform-origin: center;" src="media/figures/imitation.png"
+                class="method-image" />
+            </p>
+            <p class="content has-text-centered is-size-5" style="text-align: center; margin-top: 30px;"><b>Fig. 2</b>
             </p>
           </div>
         </div>
@@ -219,8 +304,10 @@
         <h3 class="title is-4">Long-horizon Manipulation with VLM planner</h3>
         <p class="content has-text-justified">
           GLOVER++ can serve as a perceptual backbone for a high-level VLM planner. We integrate it with Qwen-2.5-VL,
-          which decomposes long-horizon instructions into subgoals. As shown in left figure, Qwen-2.5-VL split the task
-          "Put the jar into the top drawer" into steps like "Open top drawer", "Pick up jar", "Move to top drawer" etc.,
+          which decomposes long-horizon instructions into subgoals. As shown in left figure, Qwen-2.5-VL split the
+          task
+          "Put the jar into the top drawer" into steps like "Open top drawer", "Pick up jar", "Move to top drawer"
+          etc.,
           and invoking GLOVER++ when affordance grounding is required (①, ②, ③). This hybrid system combines semantic
           planning and precise affordance prediction, enabling robust multi-stage manipulation
         </p>
