@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+    content="GLOVER++: Unleashing the Potential of Affordance Learning from Human Behaviors for Robotic Manipulation">
+  <meta name="keywords"
+    content="Actionable Affordance, Affordance Transfer, Vision-Language Model, Human Demonstrations, Robotic Manipulation">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GLOVER++ | Unleashing the Potential of Affordance Learning from Human Behaviors for Robotic Manipulation
+  </title>
+
+  <!-- Thumbnail for social media sharing -->
+  <!--To Do-->
+  <meta property="og:image" content="media/thumbnail.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" href="media/thumbnail.jpg" type="image/jpeg">
+
+  <script>
+    window.dataLayer = window.dataLayer || [];
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+  <link rel="stylesheet" href="static/fontawesome/css/fontawesome.css">
+  <link rel="stylesheet" href="static/fontawesome/css/brands.css">
+  <link rel="stylesheet" href="static/fontawesome/css/light.css">
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+
+<body>
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-fullhd">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">GLOVER++: Unleashing the Potential of Affordance Learning<br>from
+              Human Behaviors for Robotic Manipulation </h1>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <a target="_blank" href="https://teleema.github.io/">Teli Ma</a><sup>1&dagger;</sup>,
+              </span>
+              <span class="author-block">
+                <a target="_blank" href="https://scholar.google.com/citations?hl=zh-CN&user=wowRHOgAAAAJ">Jia
+                  Zheng</a><sup>1&dagger;</sup>,
+              </span>
+              <span class="author-block">
+                <a target="_blank" href="">Zifan Wang</a><sup>1</sup>,
+              </span>
+              <span class="author-block">
+                <a target="_blank" href="">Ziyao Gao</a><sup>1</sup>,
+              </span>
+              <span class="author-block">
+                <a target="_blank" href="">Jiaming Zhou</a><sup>1</sup>,
+              </span>
+              <span class="author-block">
+                <a target="_blank" href="">Junwei Liang</a><sup>1,2*</sup>,
+              </span>
+            </div>
+            <div class="is-size-5 affiliation">
+              <sup>1</sup>HKUST (GZ) <sup>2</sup>HKUST
+            </div>
+            <br>
+            <div class="affiliation-note">
+              <sup>&dagger;</sup> Equal contributions. <sup>*</sup> Corresponding author.
+            </div>
+            <div class="button-container">
+              <!-- <a href="rekep.pdf" target="_blank" class="button"><i class="fa-light fa-file"></i>&emsp14;PDF</a> -->
+              <a href="http://arxiv.org/abs/2409.01652" target="_blank" class="button"><i
+                  class="ai ai-arxiv"></i>&emsp14;arXiv</a>
+              <a href="https://www.youtube.com/embed/MDQccK681-k" target="_blank" class="button"><i
+                  class="fa-light fa-film"></i>&emsp14;Video</a>
+              <!-- <a href="https://x.com/wenlong_huang/status/1829135436717142319" target="_blank" class="button"><i
+                  class="fa-brands fa-x-twitter"></i>&emsp14;tl;dr</a> -->
+              <a href="https://github.com/huangwl18/ReKep" target="_blank" class="button"><i
+                  class="fa-light fa-code"></i>&emsp14;Code</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="hero teaser">
+    <hr class="rounded">
+    <div class="container is-max-widescreen">
+      <div class="rows">
+        <div class="publication-video">
+          <iframe src="https://www.youtube.com/embed/MDQccK681-k" frameborder="0" allow="autoplay; encrypted-media"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              Learning manipulation skills from human demonstration videos offers a promising path toward generalizable
+              and interpretable robotic intelligence—particularly through the lens of actionable affordances. However,
+              transferring such knowledge remains challenging due to: 1) a lack of large-scale datasets with precise
+              affordance annotations, and 2) insufficient exploration of affordances in diverse manipulation contexts.
+              To address these gaps, we introduce HOVA-500K, a large-scale, affordance-annotated dataset comprising
+              500,000 images across 1,726 object categories and 675 actions. We also release a standardized benchmarking
+              suite for multi-modal affordance reasoning. Built upon HOVA-500K, we present GLOVER++, a global-to-local
+              affordance training framework that effectively transfers actionable affordance knowledge from human
+              demonstrations to downstream open-vocabulary reasoning tasks. GLOVER++ achieves state-of-the-art results
+              on the HOVA-500K benchmark and demonstrates strong generalization across diverse downstream robotic
+              manipulation tasks. By explicitly modeling actionable affordances, GLOVER++ facilitates robust transfer
+              across scenes, modalities, and tasks. We hope that HOVA-500K and the GLOVER++ framework will serve as
+              valuable resources for bridging the gap between human demonstrations and robotic manipulation
+              capabilities. We will release our dataset, code and models.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!--Overview of GLOVER++-->
+      <hr class="rounded">
+      <div class="rows">
+        <h2 class="title is-3">Overview of GLOVER++</h2>
+        <img src="media/figures/method.jpg" class="method-image" />
+        <p class="content has-text-justified">
+          <b>(a)</b> GLOVER++ aims to learn generalizable affordance representation
+          from human behaviors (<i>e.g. open drawer</i>). <b>(b)</b> The training pipeline of GLOVER++. We adopt a
+          <i>global-to-local</i> decoding policy to balance global semantic decoding and local affordance decoding.
+          <b>(c)</b> GLOVER++ is capable of transferring affordable knowledge to all kinds of distributions
+          (<i>simulation, sketch, cartoon etc</i>). in an open-vocabulary manner. It also presents strong spatial
+          reasoning ability as shown in the bottom line. <b>(d)</b> By lifting inferred affordable points into 3D space,
+          GLOVER++ provides perceptive awareness for real-world manipulation tasks. (Red dots represent affordable
+          points.)
+        </p>
+      </div>
+
+      <!--HOVA-500K Dataset-->
+      <hr class="rounded">
+      <div class="rows">
+        <h2 class="title is-3">HOVA-500K Dataset</h2>
+        <p class="content has-text-justified">
+          <b>Fig. 1</b> shows the distribution of primary action categories (>1,000 samples) and related
+          objects in HOVA-500K. <b>Fig. 2</b> shows the comparisons between HOVA-500K and previous datasets.
+          <b>"Format" "Ann." "Ego." and "Exo."</b> refer to the image format, egocentric, exocentric, and annotation
+          type, respectively. Our HOVA-500K annotates the action & object categories, and the affordance with more
+          precise affordable points. <b>Fig. 3</b> are some examples of HOVA-500K, showing action, object category, and
+          Gaussian-distributed mask of affordable point.
+        </p>
+
+        <div class="columns">
+          <div class="column has-text-centered">
+            <p style="text-align:center;">
+              <img width="50%" src="media/figures/dataset/sun.jpg" class="method-image" />
+            </p>
+            <p class="content has-text-centered is-size-5"><b>Fig. 1</b></p>
+          </div>
+          <div class="column has-text-centered">
+            <p style="text-align:center;">
+              <img width="100%" src="media/figures/dataset/compare.png" class="method-image" />
+            </p>
+            <p class="content has-text-centered is-size-5"><b>Fig. 2</b></p>
+          </div>
+        </div>
+        <div class="columns">
+          <div class="column has-text-centered">
+            <p style="text-align:center;">
+              <img width="100%" src="media/figures/dataset/show.png" class="method-image" />
+            </p>
+            <p class="content has-text-centered is-size-5"><b>Fig. 3</b></p>
+          </div>
+        </div>
+      </div>
+
+      <!--Global-to-Local Affordance Tuning-->
+      <hr class="rounded">
+      <div class="rows">
+        <h2 class="title is-3">Global-to-Local Affordance Tuning</h2>
+        <p class="content has-text-justified">This is the <b>visualization of the decoded features by the global and
+            local decoder</b> (the intensity of highlight scale with interest of regions). We can observe that the
+          integration of the local decoder effectively eliminates the background noise from the global decoding.
+        <div class="columns">
+          <div class="column has-text-centered">
+            <p style="text-align:center;">
+              <img width="100%" src="media/figures/global-to-local-vis.jpg" class="method-image" />
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!--Extended Capabilities-->
+      <hr class="rounded">
+      <div class="rows">
+        <h2 class="title is-3">Extended Capabilities</h2>
+        <p class="content has-text-justified">
+          <b>Left:</b> GLOVER++ serves as a perceptual module for the VLM planner to complete long-horizon tasks.
+          <b>Right:</b> GLOVER++ enables bimanual tasks by reasoning affordances for both left and right hands with
+          spatial relationships.
+        </p>
+        <div class="columns">
+          <div class="column has-text-centered">
+            <p style="text-align:center;">
+              <img width="100%" src="media/figures/extend.jpg" class="method-image" />
+            </p>
+          </div>
+        </div>
+        <h3 class="title is-4">Long-horizon Manipulation with VLM planner</h3>
+        <p class="content has-text-justified">
+          GLOVER++ can serve as a perceptual backbone for a high-level VLM planner. We integrate it with Qwen-2.5-VL,
+          which decomposes long-horizon instructions into subgoals. As shown in left figure, Qwen-2.5-VL split the task
+          "Put the jar into the top drawer" into steps like "Open top drawer", "Pick up jar", "Move to top drawer" etc.,
+          and invoking GLOVER++ when affordance grounding is required (①, ②, ③). This hybrid system combines semantic
+          planning and precise affordance prediction, enabling robust multi-stage manipulation
+        </p>
+        <div class="columns">
+          <div class="column has-text-centered">
+            <video id="dist1" controls autoplay loop muted width="100%">
+              <source src="media/videos/put bottle into the drawer.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+        <h3 class="title is-4">Bimanual Manipulation</h3>
+        <p>
+          Thanks to its spatial reasoning capabilities, GLOVER++ can interpret positional cues (e.g., "left/right",
+          "top/bottom") to enable dual-arm affordance reasoning. It generates graspable regions for both arms while
+          maintaining spatial separation and feasibility (right figure). We execute dual-arm motions using
+          obstacle-avoidance IK on the Unitree G1 humanoid robot.
+        </p>
+        <div class="columns">
+          <div class="column has-text-centered">
+            <video id="dist1" controls autoplay loop muted width="100%">
+              <source src="media/videos/bimanual.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+
+      <!--To Do-->
+      <hr class="rounded">
+      <h2 class="title is-3">BibTeX</h2>
+      <p class="bibtex">
+        <!--
+        @article{huang2024rekep, <br>
+        &nbsp;&nbsp;title = {ReKep: Spatio-Temporal Reasoning of Relational Keypoint Constraints for Robotic
+        Manipulation}, <br>
+        &nbsp;&nbsp;author = {Huang, Wenlong and Wang, Chen and Li, Yunzhu and Zhang, Ruohan and Fei-Fei, Li}, <br>
+        &nbsp;&nbsp;journal = {arXiv preprint arXiv:2409.01652}, <br>
+        &nbsp;&nbsp;year = {2024} <br>
+        }
+        -->
+      </p>
+    </div>
+
+  </section>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column">
+          <div class="content has-text-centered">
+            <p>
+              Website template borrowed from <a href="https://rekep-robot.github.io/">ReKep</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+</body>
+
+</html>
