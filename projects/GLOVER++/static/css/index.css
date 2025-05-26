@@ -5,13 +5,13 @@ body {
 
 
 .footer .icon-link {
-    font-size: 1em;
-    color: #000;
+  font-size: 1em;
+  color: #000;
 }
 
 .link-block a {
-    margin-top: 5px;
-    margin-bottom: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .dnerf {
@@ -32,9 +32,10 @@ body {
 
 .teaser video {
   object-fit: fill;
-  
+
 }
-#glass{
+
+#glass {
   margin-left: -10px;
 }
 
@@ -56,40 +57,39 @@ body {
   object-fit: fit;
 }
 
-.publication-header .hero-body {
-}
+.publication-header .hero-body {}
 
 .publication-title {
-    font-family: 'Google Sans', sans-serif;
+  font-family: 'Google Sans', sans-serif;
 }
 
 .publication-authors {
-    font-family: 'Google Sans', sans-serif;
+  font-family: 'Google Sans', sans-serif;
 }
 
 .publication-venue {
-    color: #555;
-    width: fit-content;
-    font-weight: bold;
+  color: #555;
+  width: fit-content;
+  font-weight: bold;
 }
 
 .publication-awards {
-    color: #ff3860;
-    width: fit-content;
-    font-weight: bolder;
+  color: #ff3860;
+  width: fit-content;
+  font-weight: bolder;
 }
 
 .publication-authors a {
-   color: #000000 !important;
+  color: #000000 !important;
 }
 
 .conference-authors a {
-   color: #000000 !important;
+  color: #000000 !important;
 }
 
 .publication-authors a:hover {
-    text-decoration: underline;
-    color: #414141 !important;
+  text-decoration: underline;
+  color: #414141 !important;
 }
 
 .author-block {
@@ -97,25 +97,24 @@ body {
 }
 
 .publication-video {
-    position: relative;
-    width: 100%;
-    height: 0;
-    padding-bottom: 56.25%;
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
 
-    overflow: hidden;
-    border-radius: 10px !important;
+  overflow: hidden;
+  border-radius: 10px !important;
 }
 
 .publication-video iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
-.publication-body img {
-}
+.publication-body img {}
 
 .results-carousel {
   overflow: hidden;
@@ -145,8 +144,7 @@ body {
   border-radius: 5px;
 }
 
-.interpolation-video-column {
-}
+.interpolation-video-column {}
 
 .interpolation-panel .slider {
   margin: 0 !important;
@@ -159,20 +157,21 @@ body {
 #interpolation-image-wrapper {
   width: 100%;
 }
+
 #interpolation-image-wrapper img {
   border-radius: 5px;
 }
 
 #method-image img {
-    padding: 0;
-    display: block;
-    margin: 0 auto;
-    max-height: 100%;
-    max-width: 100%;
+  padding: 0;
+  display: block;
+  margin: 0 auto;
+  max-height: 100%;
+  max-width: 100%;
 }
 
- .dropdown-item{
-    white-space: pre-wrap;
+.dropdown-item {
+  white-space: pre-wrap;
 }
 
 
@@ -284,4 +283,27 @@ hr.rounded {
   padding-right: 0.5em;
   hyphens: none !important;
   line-height: unset !important;
+}
+
+.iframe-dropdown-container select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: #fff url('data:image/svg+xml;utf8,<svg fill="gray" height="16" viewBox="0 0 20 20" width="16" xmlns="http://www.w3.org/2000/svg"><path d="M7.293 7.293a1 1 0 011.414 0L10 8.586l1.293-1.293a1 1 0 111.414 1.414l-2 2a1 1 0 01-1.414 0l-2-2a1 1 0 010-1.414z"/></svg>') no-repeat right 0.75em center/1em;
+  padding-right: 2.5em;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  height: 2.5em;
+  font-size: 1em;
+  transition: border-color 0.2s;
+}
+
+.iframe-dropdown-container select:focus {
+  border-color: #3273dc;
+  outline: none;
+}
+
+.iframe-dropdown-container label {
+  margin-right: 0.5em;
+  font-weight: bold;
 }

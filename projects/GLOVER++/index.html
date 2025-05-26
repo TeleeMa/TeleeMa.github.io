@@ -9,7 +9,7 @@
     content="Actionable Affordance, Affordance Transfer, Vision-Language Model, Human Demonstrations, Robotic Manipulation">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>GLOVER++ | Unleashing the Potential of Affordance Learning from Human Behaviors for Robotic Manipulation
-  </title> 
+  </title>
 
   <!-- Thumbnail for social media sharing -->
   <meta property="og:image" content="media/figures/thumbnail.png">
@@ -59,10 +59,12 @@
                   Zheng</a><sup>1&dagger;</sup>,
               </span>
               <span class="author-block">
-                <a target="_blank" href="https://scholar.google.com/citations?user=GaJXZ-UAAAAJ&hl=en">Zifan Wang</a><sup>1</sup>,
+                <a target="_blank" href="https://scholar.google.com/citations?user=GaJXZ-UAAAAJ&hl=en">Zifan
+                  Wang</a><sup>1</sup>,
               </span>
               <span class="author-block">
-                <a target="_blank" href="https://scholar.google.com/citations?user=pLJfwc4AAAAJ&hl=en&oi=ao">Ziyao Gao</a><sup>1</sup>,
+                <a target="_blank" href="https://scholar.google.com/citations?user=pLJfwc4AAAAJ&hl=en&oi=ao">Ziyao
+                  Gao</a><sup>1</sup>,
               </span>
               <span class="author-block">
                 <a target="_blank" href="https://jiaming-zhou.github.io/">Jiaming Zhou</a><sup>1</sup>,
@@ -81,13 +83,15 @@
             <div class="button-container">
               <!-- <a href="rekep.pdf" target="_blank" class="button"><i class="fa-light fa-file"></i>&emsp14;PDF</a> -->
               <!--To Do-->
-              <a href="https://arxiv.org/pdf/2505.11865" target="_blank" class="button"><i class="ai ai-arxiv"></i>&emsp14;arXiv</a>
+              <a href="https://arxiv.org/pdf/2505.11865" target="_blank" class="button"><i
+                  class="ai ai-arxiv"></i>&emsp14;arXiv</a>
               <a href="https://www.youtube.com/embed/MDQccK681-k" target="_blank" class="button"><i
                   class="fa-light fa-film"></i>&emsp14;Video</a>
               <!-- <a href="https://x.com/wenlong_huang/status/1829135436717142319" target="_blank" class="button"><i
                   class="fa-brands fa-x-twitter"></i>&emsp14;tl;dr</a> -->
               <!--To Do-->
-              <a href="https://github.com/TeleeMa/GLOVER" target="_blank" class="button"><i class="fa-light fa-code"></i>&emsp14;Code</a>
+              <a href="https://github.com/TeleeMa/GLOVER" target="_blank" class="button"><i
+                  class="fa-light fa-code"></i>&emsp14;Code</a>
             </div>
           </div>
         </div>
@@ -222,131 +226,229 @@
         </div>
       </div>
 
-      <!--Comparison with Qwen-2.5-VL-->
+      <!--Affordance Reasoning 3D Results-->
       <hr class="rounded">
       <div class="rows">
-        <h2 class="title is-3">Comparison with Qwen-2.5-VL</h2>
-        <p class="content has-text-justified">
-          We aim to unleash the potential of the affordance representation in diverse downstream tasks. Compared with
-          <b>Qwen-2.5-VL</b>, a powerful VLM with strong spatial understanding, GLOVER++ provides more physically
-          plausible and functionally grounded affordance predictions.
-        </p>
-        <div class="columns">
-          <div class="column has-text-centered">
-            <p style="text-align:center;">
-              <img width="100%" src="media/figures/compare_to_qwen.jpg" class="method-image" />
-            </p>
+        <h2 class="title is-3">Affordance Reasoning 3D Results</h2>
+        <div class="iframe-thumbnail-selector" style="margin-bottom: 2.5rem; text-align:center;">
+          <span style="font-weight:bold; font-size:1.1em;">Choose 3D scene:</span>
+          <div style="display: flex; justify-content: center; gap: 4em; margin-top: 1em;">
+            <!-- Scene 1 -->
+            <div>
+              <img src="media/figures/thumbnails/scene1.jpg" alt="Scene 1" id="thumb-scene1"
+                style="height:4em; border:3px solid #3273dc; border-radius:8px; cursor:pointer; box-shadow:0 0 8px #3273dc55; margin-bottom:0.5em;">
+              <div style="font-weight:bold; margin-bottom:0.5em;">Scene 1</div>
+              <select id="scene1-select" onchange="switchIframeDirect('scene1')" style="width: 8em;">
+                <option value="scene1-pot">pot</option>
+                <option value="scene1-pan">pan</option>
+                <option value="scene1-cup">cup</option>
+                <option value="scene1-oven">oven</option>
+                <option value="scene1-bottle">bottle</option>
+              </select>
+            </div>
+            
+            <!-- Scene 2 -->
+            <div>
+              <img src="media/figures/thumbnails/scene2.jpg" alt="Scene 2" id="thumb-scene2"
+                style="height:4em; border:3px solid #ccc; border-radius:8px; cursor:pointer; margin-bottom:0.5em;">
+              <div style="font-weight:bold; margin-bottom:0.5em;">Scene 2</div>
+              <select id="scene2-select" onchange="switchIframeDirect('scene2')" style="width: 8em;">
+                <option value="scene2-art knife">art knife</option>
+                <option value="scene2-hammer">hammer</option>
+                <option value="scene2-plier">plier</option>
+                <option value="scene2-scissor">scissor</option>
+                <option value="scene2-wrench">wrench</option>
+              </select>
+            </div>
           </div>
         </div>
-      </div>
+        <div id="iframe-container" class="iframe-container" style="width: 100%;">
+          <iframe id="scene1-pot" class="iframe" style="display:block; width:100vw; min-height:60vh; border:none;"
+            src="https://jiaazheng.github.io/viser/viser-client/?playbackPath=https://jiaazheng.github.io/viser/recordings/1/pot.viser"></iframe>
+          <iframe id="scene1-pan" class="iframe" style="display:none; width:100vw; min-height:60vh; border:none;"
+            src="https://jiaazheng.github.io/viser/viser-client/?playbackPath=https://jiaazheng.github.io/viser/recordings/1/pan.viser"></iframe>
+          <iframe id="scene1-cup" class="iframe" style="display:none; width:100vw; min-height:60vh; border:none;"
+            src="https://jiaazheng.github.io/viser/viser-client/?playbackPath=https://jiaazheng.github.io/viser/recordings/1/cup.viser"></iframe>
+          <iframe id="scene1-oven" class="iframe" style="display:none; width:100vw; min-height:60vh; border:none;"
+            src="https://jiaazheng.github.io/viser/viser-client/?playbackPath=https://jiaazheng.github.io/viser/recordings/1/oven.viser"></iframe>
+          <iframe id="scene1-bottle" class="iframe" style="display:none; width:100vw; min-height:60vh; border:none;"
+            src="https://jiaazheng.github.io/viser/viser-client/?playbackPath=https://jiaazheng.github.io/viser/recordings/1/bottle.viser"></iframe>
+          <iframe id="scene2-art knife" class="iframe" style="display:none; width:100vw; min-height:60vh; border:none;"
+            src="https://jiaazheng.github.io/viser/viser-client/?playbackPath=https://jiaazheng.github.io/viser/recordings/2/art knife.viser"></iframe>
+          <iframe id="scene2-hammer" class="iframe" style="display:none; width:100vw; min-height:60vh; border:none;"
+            src="https://jiaazheng.github.io/viser/viser-client/?playbackPath=https://jiaazheng.github.io/viser/recordings/2/hammer.viser"></iframe>
+          <iframe id="scene2-plier" class="iframe" style="display:none; width:100vw; min-height:60vh; border:none;"
+            src="https://jiaazheng.github.io/viser/viser-client/?playbackPath=https://jiaazheng.github.io/viser/recordings/2/plier.viser"></iframe>
+          <iframe id="scene2-scissor" class="iframe" style="display:none; width:100vw; min-height:60vh; border:none;"
+            src="https://jiaazheng.github.io/viser/viser-client/?playbackPath=https://jiaazheng.github.io/viser/recordings/2/scissor.viser"></iframe>
+          <iframe id="scene2-wrench" class="iframe" style="display:none; width:100vw; min-height:60vh; border:none;"
+            src="https://jiaazheng.github.io/viser/viser-client/?playbackPath=https://jiaazheng.github.io/viser/recordings/2/wrench.viser"></iframe>
+        </div>
+        <script>
+          // 直接切换iframe
+          function switchIframeDirect(group) {
+            var selectId = group === 'scene1' ? 'scene1-select' : 'scene2-select';
+            var selected = document.getElementById(selectId).value;
+            var iframes = document.querySelectorAll('#iframe-container .iframe');
+            iframes.forEach(function (iframe) {
+              iframe.style.display = 'none';
+            });
+            var showIframe = document.getElementById(selected);
+            if (showIframe) {
+              showIframe.style.display = 'block';
+            }
+            // 高亮缩略图
+            document.getElementById('thumb-scene1').style.border = group === 'scene1' ? '3px solid #3273dc' : '3px solid #ccc';
+            document.getElementById('thumb-scene1').style.boxShadow = group === 'scene1' ? '0 0 8px #3273dc55' : 'none';
+            document.getElementById('thumb-scene2').style.border = group === 'scene2' ? '3px solid #3273dc' : '3px solid #ccc';
+            document.getElementById('thumb-scene2').style.boxShadow = group === 'scene2' ? '0 0 8px #3273dc55' : 'none';
+          }
+          // 点击图片时切换高亮并显示第一个
+          document.getElementById('thumb-scene1').onclick = function () {
+            document.getElementById('scene1-select').selectedIndex = 0;
+            switchIframeDirect('scene1');
+          }
+          document.getElementById('thumb-scene2').onclick = function () {
+            document.getElementById('scene2-select').selectedIndex = 0;
+            switchIframeDirect('scene2');
+          }
+          // 页面加载时初始化
+          document.addEventListener("DOMContentLoaded", function () {
+            switchIframeDirect('scene1');
+          });
+        </script>
 
-      <!--Zero Shot Manipulatio-->
-      <hr class="rounded">
-      <div class="rows">
-        <h2 class="title is-3">Zero-Shot Manipulation</h2>
-        <p class="content has-text-justified">
-          By projecting affordance prediction into 3D space, GLOVER++ can perform zero-shot manipulation tasks in both
-          the simulated and real-world environments. We show some qualitative demonstrations. The reasoned argmax
-          affordance point from GLOVER++ is shown in the video.
-        </p>
-        <div class="columns">
-          <div class="column has-text-centered">
-            <video id="dist1" controls autoplay loop muted width="100%">
-              <source src="media/videos/grasp.mp4" type="video/mp4">
-            </video>
-          </div>
-        </div>
-      </div>
+        <h3>This in-browser interactive 3D scene is enabled by <a style="text-decoration:none"
+            href="https://github.com/nerfstudio-project/viser">Viser</a></h3>
+        <br>
 
-      <!--Imitation Learning-->
-      <hr class="rounded">
-      <div class="rows">
-        <h2 class="title is-3">Imitation Learning</h2>
-        <p class="content has-text-justified">
-          <b>Left:</b> GLOVER++ serves as a perceptual module for the VLM planner to complete long-horizon tasks.
-          <b>Right:</b> GLOVER++ enables bimanual tasks by reasoning affordances for both left and right hands with
-          spatial relationships.
-        </p>
-        <div class="columns">
-          <div class="column has-text-centered">
-            <p style="text-align:center; margin-left: -90px;margin-top: 20px;">
-              <img width="50%" src="media/figures/rlbench_vis.jpg" class="method-image" />
-            </p>
-            <p class="content has-text-centered is-size-5"><b>Fig. 1</b></p>
-          </div>
-          <div class="column has-text-centered">
-            <p style="text-align:center; margin-top: 70px;margin-right:130px ;">
-              <img style="transform: scale(1.5); transform-origin: center;" src="media/figures/imitation.png"
-                class="method-image" />
-            </p>
-            <p class="content has-text-centered is-size-5" style="text-align: center; margin-top: 30px;"><b>Fig. 2</b>
-            </p>
+        <!--Comparison with Qwen-2.5-VL-->
+        <hr class="rounded">
+        <div class="rows">
+          <h2 class="title is-3">Comparison with Qwen-2.5-VL</h2>
+          <p class="content has-text-justified">
+            We aim to unleash the potential of the affordance representation in diverse downstream tasks. Compared with
+            <b>Qwen-2.5-VL</b>, a powerful VLM with strong spatial understanding, GLOVER++ provides more physically
+            plausible and functionally grounded affordance predictions.
+          </p>
+          <div class="columns">
+            <div class="column has-text-centered">
+              <p style="text-align:center;">
+                <img width="100%" src="media/figures/compare_to_qwen.jpg" class="method-image" />
+              </p>
+            </div>
           </div>
         </div>
-      </div>
 
-      <!--Extended Capabilities-->
-      <hr class="rounded">
-      <div class="rows">
-        <h2 class="title is-3">Extended Capabilities</h2>
-        <p class="content has-text-justified">
-          <b>Left:</b> GLOVER++ serves as a perceptual module for the VLM planner to complete long-horizon tasks.
-          <b>Right:</b> GLOVER++ enables bimanual tasks by reasoning affordances for both left and right hands with
-          spatial relationships.
-        </p>
-        <div class="columns">
-          <div class="column has-text-centered">
-            <p style="text-align:center;">
-              <img width="100%" src="media/figures/extend.jpg" class="method-image" />
-            </p>
+        <!--Zero Shot Manipulatio-->
+        <hr class="rounded">
+        <div class="rows">
+          <h2 class="title is-3">Zero-Shot Manipulation</h2>
+          <p class="content has-text-justified">
+            By projecting affordance prediction into 3D space, GLOVER++ can perform zero-shot manipulation tasks in both
+            the simulated and real-world environments. We show some qualitative demonstrations. The reasoned argmax
+            affordance point from GLOVER++ is shown in the video.
+          </p>
+          <div class="columns">
+            <div class="column has-text-centered">
+              <video id="dist1" controls autoplay loop muted width="100%">
+                <source src="media/videos/grasp.mp4" type="video/mp4">
+              </video>
+            </div>
           </div>
         </div>
-        <h3 class="title is-4">Long-horizon Manipulation with VLM planner</h3>
-        <p class="content has-text-justified">
-          GLOVER++ can serve as a perceptual backbone for a high-level VLM planner. We integrate it with Qwen-2.5-VL,
-          which decomposes long-horizon instructions into subgoals. As shown in left figure, Qwen-2.5-VL split the
-          task
-          "Put the jar into the top drawer" into steps like "Open top drawer", "Pick up jar", "Move to top drawer"
-          etc.,
-          and invoking GLOVER++ when affordance grounding is required (①, ②, ③). This hybrid system combines semantic
-          planning and precise affordance prediction, enabling robust multi-stage manipulation
-        </p>
-        <div class="columns">
-          <div class="column has-text-centered">
-            <video id="dist1" controls autoplay loop muted width="100%">
-              <source src="media/videos/put bottle into the drawer.mp4" type="video/mp4">
-            </video>
-          </div>
-        </div>
-        <h3 class="title is-4">Bimanual Manipulation</h3>
-        <p>
-          Thanks to its spatial reasoning capabilities, GLOVER++ can interpret positional cues (e.g., "left/right",
-          "top/bottom") to enable dual-arm affordance reasoning. It generates graspable regions for both arms while
-          maintaining spatial separation and feasibility (right figure). We execute dual-arm motions using
-          obstacle-avoidance IK on the Unitree G1 humanoid robot.
-        </p>
-        <div class="columns">
-          <div class="column has-text-centered">
-            <video id="dist1" controls autoplay loop muted width="100%">
-              <source src="media/videos/bimanual.mp4" type="video/mp4">
-            </video>
-          </div>
-        </div>
-      </div>
 
-      <!--To Do-->
-      <hr class="rounded">
-      <h2 class="title is-3">BibTeX</h2>
-      <p class="bibtex">
-        
-        @article{ma2025glover++, <br>
-          title={GLOVER++: Unleashing the Potential of Affordance Learning from Human Behaviors for Robotic Manipulation},  <br>
-          author={Ma, Teli and Zheng, Jia and Wang, Zifan and Gao, Ziyao and Zhou, Jiaming and Liang, Junwei},  <br>
-          journal={arXiv preprint arXiv:2505.11865},  <br>
+        <!--Imitation Learning-->
+        <hr class="rounded">
+        <div class="rows">
+          <h2 class="title is-3">Imitation Learning</h2>
+          <p class="content has-text-justified">
+            <b>Left:</b> GLOVER++ serves as a perceptual module for the VLM planner to complete long-horizon tasks.
+            <b>Right:</b> GLOVER++ enables bimanual tasks by reasoning affordances for both left and right hands with
+            spatial relationships.
+          </p>
+          <div class="columns">
+            <div class="column has-text-centered">
+              <p style="text-align:center; margin-left: -90px;margin-top: 20px;">
+                <img width="50%" src="media/figures/rlbench_vis.jpg" class="method-image" />
+              </p>
+              <p class="content has-text-centered is-size-5"><b>Fig. 1</b></p>
+            </div>
+            <div class="column has-text-centered">
+              <p style="text-align:center; margin-top: 70px;margin-right:130px ;">
+                <img style="transform: scale(1.5); transform-origin: center;" src="media/figures/imitation.png"
+                  class="method-image" />
+              </p>
+              <p class="content has-text-centered is-size-5" style="text-align: center; margin-top: 30px;"><b>Fig. 2</b>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!--Extended Capabilities-->
+        <hr class="rounded">
+        <div class="rows">
+          <h2 class="title is-3">Extended Capabilities</h2>
+          <p class="content has-text-justified">
+            <b>Left:</b> GLOVER++ serves as a perceptual module for the VLM planner to complete long-horizon tasks.
+            <b>Right:</b> GLOVER++ enables bimanual tasks by reasoning affordances for both left and right hands with
+            spatial relationships.
+          </p>
+          <div class="columns">
+            <div class="column has-text-centered">
+              <p style="text-align:center;">
+                <img width="100%" src="media/figures/extend.jpg" class="method-image" />
+              </p>
+            </div>
+          </div>
+          <h3 class="title is-4">Long-horizon Manipulation with VLM planner</h3>
+          <p class="content has-text-justified">
+            GLOVER++ can serve as a perceptual backbone for a high-level VLM planner. We integrate it with Qwen-2.5-VL,
+            which decomposes long-horizon instructions into subgoals. As shown in left figure, Qwen-2.5-VL split the
+            task
+            "Put the jar into the top drawer" into steps like "Open top drawer", "Pick up jar", "Move to top drawer"
+            etc.,
+            and invoking GLOVER++ when affordance grounding is required (①, ②, ③). This hybrid system combines semantic
+            planning and precise affordance prediction, enabling robust multi-stage manipulation
+          </p>
+          <div class="columns">
+            <div class="column has-text-centered">
+              <video id="dist1" controls autoplay loop muted width="100%">
+                <source src="media/videos/put bottle into the drawer.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <h3 class="title is-4">Bimanual Manipulation</h3>
+          <p>
+            Thanks to its spatial reasoning capabilities, GLOVER++ can interpret positional cues (e.g., "left/right",
+            "top/bottom") to enable dual-arm affordance reasoning. It generates graspable regions for both arms while
+            maintaining spatial separation and feasibility (right figure). We execute dual-arm motions using
+            obstacle-avoidance IK on the Unitree G1 humanoid robot.
+          </p>
+          <div class="columns">
+            <div class="column has-text-centered">
+              <video id="dist1" controls autoplay loop muted width="100%">
+                <source src="media/videos/bimanual.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+
+        <!--To Do-->
+        <hr class="rounded">
+        <h2 class="title is-3">BibTeX</h2>
+        <p class="bibtex">
+
+          @article{ma2025glover++, <br>
+          title={GLOVER++: Unleashing the Potential of Affordance Learning from Human Behaviors for Robotic
+          Manipulation},
+          <br>
+          author={Ma, Teli and Zheng, Jia and Wang, Zifan and Gao, Ziyao and Zhou, Jiaming and Liang, Junwei}, <br>
+          journal={arXiv preprint arXiv:2505.11865}, <br>
           year={2025}
-        }
-      </p>
-    </div>
+          }
+        </p>
+      </div>
 
   </section>
   </div>
