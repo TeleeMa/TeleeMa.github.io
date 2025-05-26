@@ -231,14 +231,14 @@
       <div class="rows">
         <h2 class="title is-3">Affordance Reasoning 3D Results</h2>
         <div class="iframe-thumbnail-selector" style="margin-bottom: 2.5rem; text-align:center;">
-          <span style="font-weight:bold; font-size:1.1em;">Choose 3D scene:</span>
-          <div style="display: flex; justify-content: center; gap: 4em; margin-top: 1em;">
+          <span style="font-weight:bold; font-size:1.4em;">Choose 3D scene:</span>
+          <div style="display: flex; justify-content: center; gap: 4em; margin-top: 1.5em;">
             <!-- Scene 1 -->
             <div>
               <img src="media/figures/thumbnails/scene1.jpg" alt="Scene 1" id="thumb-scene1"
-                style="height:4em; border:3px solid #3273dc; border-radius:8px; cursor:pointer; box-shadow:0 0 8px #3273dc55; margin-bottom:0.5em;">
-              <div style="font-weight:bold; margin-bottom:0.5em;">Scene 1</div>
-              <select id="scene1-select" onchange="switchIframeDirect('scene1')" style="width: 8em;">
+                style="height:8em; border:3px solid #3273dc; border-radius:8px; cursor:pointer; box-shadow:0 0 8px #3273dc55; margin-bottom:0.8em;">
+              <div style="font-weight:bold; font-size:1.2em; margin-bottom:0.8em;">Scene 1</div>
+              <select id="scene1-select" onchange="switchIframeDirect('scene1')" style="width: 10em; font-size:1.1em; padding:0.3em;">
                 <option value="scene1-pot">pot</option>
                 <option value="scene1-pan">pan</option>
                 <option value="scene1-cup">cup</option>
@@ -250,9 +250,9 @@
             <!-- Scene 2 -->
             <div>
               <img src="media/figures/thumbnails/scene2.jpg" alt="Scene 2" id="thumb-scene2"
-                style="height:4em; border:3px solid #ccc; border-radius:8px; cursor:pointer; margin-bottom:0.5em;">
-              <div style="font-weight:bold; margin-bottom:0.5em;">Scene 2</div>
-              <select id="scene2-select" onchange="switchIframeDirect('scene2')" style="width: 8em;">
+                style="height:8em; border:3px solid #ccc; border-radius:8px; cursor:pointer; margin-bottom:0.8em;">
+              <div style="font-weight:bold; font-size:1.2em; margin-bottom:0.8em;">Scene 2</div>
+              <select id="scene2-select" onchange="switchIframeDirect('scene2')" style="width: 10em; font-size:1.1em; padding:0.3em;">
                 <option value="scene2-art knife">art knife</option>
                 <option value="scene2-hammer">hammer</option>
                 <option value="scene2-plier">plier</option>
@@ -262,27 +262,27 @@
             </div>
           </div>
         </div>
-        <div id="iframe-container" class="iframe-container" style="width: 100%;">
-          <iframe id="scene1-pot" class="iframe" style="display:block; width:100vw; min-height:60vh; border:none;"
-            src="https://jiaazheng.github.io/viser/viser-client/?playbackPath=https://jiaazheng.github.io/viser/recordings/1/pot.viser"></iframe>
-          <iframe id="scene1-pan" class="iframe" style="display:none; width:100vw; min-height:60vh; border:none;"
-            src="https://jiaazheng.github.io/viser/viser-client/?playbackPath=https://jiaazheng.github.io/viser/recordings/1/pan.viser"></iframe>
-          <iframe id="scene1-cup" class="iframe" style="display:none; width:100vw; min-height:60vh; border:none;"
-            src="https://jiaazheng.github.io/viser/viser-client/?playbackPath=https://jiaazheng.github.io/viser/recordings/1/cup.viser"></iframe>
-          <iframe id="scene1-oven" class="iframe" style="display:none; width:100vw; min-height:60vh; border:none;"
-            src="https://jiaazheng.github.io/viser/viser-client/?playbackPath=https://jiaazheng.github.io/viser/recordings/1/oven.viser"></iframe>
-          <iframe id="scene1-bottle" class="iframe" style="display:none; width:100vw; min-height:60vh; border:none;"
-            src="https://jiaazheng.github.io/viser/viser-client/?playbackPath=https://jiaazheng.github.io/viser/recordings/1/bottle.viser"></iframe>
-          <iframe id="scene2-art knife" class="iframe" style="display:none; width:100vw; min-height:60vh; border:none;"
-            src="https://jiaazheng.github.io/viser/viser-client/?playbackPath=https://jiaazheng.github.io/viser/recordings/2/art knife.viser"></iframe>
-          <iframe id="scene2-hammer" class="iframe" style="display:none; width:100vw; min-height:60vh; border:none;"
-            src="https://jiaazheng.github.io/viser/viser-client/?playbackPath=https://jiaazheng.github.io/viser/recordings/2/hammer.viser"></iframe>
-          <iframe id="scene2-plier" class="iframe" style="display:none; width:100vw; min-height:60vh; border:none;"
-            src="https://jiaazheng.github.io/viser/viser-client/?playbackPath=https://jiaazheng.github.io/viser/recordings/2/plier.viser"></iframe>
-          <iframe id="scene2-scissor" class="iframe" style="display:none; width:100vw; min-height:60vh; border:none;"
-            src="https://jiaazheng.github.io/viser/viser-client/?playbackPath=https://jiaazheng.github.io/viser/recordings/2/scissor.viser"></iframe>
-          <iframe id="scene2-wrench" class="iframe" style="display:none; width:100vw; min-height:60vh; border:none;"
-            src="https://jiaazheng.github.io/viser/viser-client/?playbackPath=https://jiaazheng.github.io/viser/recordings/2/wrench.viser"></iframe>
+        <div id="iframe-container" class="iframe-container" style="width: 100%; max-width: 1200px; margin: 0 auto;">
+          <iframe id="scene1-pot" class="iframe" style="display:block; width:100%; min-height:60vh; border:none;"
+            src="https://jiaazheng.github.io/viser/viser-client/?playbackPath=https://jiaazheng.github.io/viser/recordings/1/pot.viser&camera.position=[0,0,2]&camera.target=[0,0,0]"></iframe>
+          <iframe id="scene1-pan" class="iframe" style="display:none; width:100%; min-height:60vh; border:none;"
+            src="https://jiaazheng.github.io/viser/viser-client/?playbackPath=https://jiaazheng.github.io/viser/recordings/1/pan.viser&camera.position=[0,0,2]&camera.target=[0,0,0]"></iframe>
+          <iframe id="scene1-cup" class="iframe" style="display:none; width:100%; min-height:60vh; border:none;"
+            src="https://jiaazheng.github.io/viser/viser-client/?playbackPath=https://jiaazheng.github.io/viser/recordings/1/cup.viser&camera.position=[0,0,2]&camera.target=[0,0,0]"></iframe>
+          <iframe id="scene1-oven" class="iframe" style="display:none; width:100%; min-height:60vh; border:none;"
+            src="https://jiaazheng.github.io/viser/viser-client/?playbackPath=https://jiaazheng.github.io/viser/recordings/1/oven.viser&camera.position=[0,0,2]&camera.target=[0,0,0]"></iframe>
+          <iframe id="scene1-bottle" class="iframe" style="display:none; width:100%; min-height:60vh; border:none;"
+            src="https://jiaazheng.github.io/viser/viser-client/?playbackPath=https://jiaazheng.github.io/viser/recordings/1/bottle.viser&camera.position=[0,0,2]&camera.target=[0,0,0]"></iframe>
+          <iframe id="scene2-art knife" class="iframe" style="display:none; width:100%; min-height:60vh; border:none;"
+            src="https://jiaazheng.github.io/viser/viser-client/?playbackPath=https://jiaazheng.github.io/viser/recordings/2/art knife.viser&camera.position=[0,0,2]&camera.target=[0,0,0]"></iframe>
+          <iframe id="scene2-hammer" class="iframe" style="display:none; width:100%; min-height:60vh; border:none;"
+            src="https://jiaazheng.github.io/viser/viser-client/?playbackPath=https://jiaazheng.github.io/viser/recordings/2/hammer.viser&camera.position=[0,0,2]&camera.target=[0,0,0]"></iframe>
+          <iframe id="scene2-plier" class="iframe" style="display:none; width:100%; min-height:60vh; border:none;"
+            src="https://jiaazheng.github.io/viser/viser-client/?playbackPath=https://jiaazheng.github.io/viser/recordings/2/plier.viser&camera.position=[0,0,2]&camera.target=[0,0,0]"></iframe>
+          <iframe id="scene2-scissor" class="iframe" style="display:none; width:100%; min-height:60vh; border:none;"
+            src="https://jiaazheng.github.io/viser/viser-client/?playbackPath=https://jiaazheng.github.io/viser/recordings/2/scissor.viser&camera.position=[0,0,2]&camera.target=[0,0,0]"></iframe>
+          <iframe id="scene2-wrench" class="iframe" style="display:none; width:100%; min-height:60vh; border:none;"
+            src="https://jiaazheng.github.io/viser/viser-client/?playbackPath=https://jiaazheng.github.io/viser/recordings/2/wrench.viser&camera.position=[0,0,2]&camera.target=[0,0,0]"></iframe>
         </div>
         <script>
           // 直接切换iframe
